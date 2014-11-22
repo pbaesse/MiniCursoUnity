@@ -33,7 +33,7 @@ public class Jogador : MonoBehaviour {
 		gui.fontStyle = FontStyle.Bold;
 		gui.normal.textColor = Color.white;
 
-		GUI.TextArea(new Rect(10, 10, 200, 30), "");
+		GUI.TextArea(new Rect(10, 10, 150, 30), "");
 		GUI.Label (new Rect (13, 10, 200, 50), "Moedas: " + moedas, gui);
 	}
 }
