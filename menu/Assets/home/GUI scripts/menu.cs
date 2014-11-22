@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class menu : MonoBehaviour {
-	public bool showOptions = false;
-	public bool showCredits = false;
-	private int guiButtonWidth = 100;
+	public bool Nivel = false;
+	public bool Creditos = false;
+	private int botaoAltura = 100;
 	// Use this for initialization
 
 	/*
@@ -20,61 +20,65 @@ public class menu : MonoBehaviour {
 	 */
 	//public Texture t;
 	void OnGUI(){
-		/*GUI.Box (new Rect(300,350,Screen.width/2 -130,Screen.height/2 -130),"");
-		GUI.Button (new Rect (100, 100,Screen.width / 2 - 100, Screen.height / 2 - 100), "Start Game");
-		*/
-		GUILayout.BeginArea (new Rect (0, 0, 200, 300));
+		GUILayout.BeginArea (new Rect (400, 200, 200, 400));
 		GUILayout.BeginVertical ();
-		if (GUILayout.Button ("Start Game")) {
-			Application.LoadLevel ("");
-			Debug.Log("Clicked the image");
+		if (GUILayout.Button ("Iniciar Jogo")) {
+			Nivel = false;
+			Creditos = false;
+			//Application.LoadLevel ("nome da sena");
+			//descomente a linha acima e apague a linha abaixo
+			Debug.Log("jogandu");
+			//a linha acima e so pra testar a funcionalidade do botaum...
 		}
-		if (GUILayout.Button ("Options")) {
-			showOptions = true;
+		if (GUILayout.Button ("Escolher nivel")) {
+			Nivel = true;
+			Creditos = false;
 		}
-		if (GUILayout.Button ("Credits")) {
-			showCredits = true;
+		if (GUILayout.Button ("Creditos")) {
+			Creditos = true;
+			Nivel = false;
 		}
-		if (GUILayout.Button ("Quit Game")) {
+		if (GUILayout.Button ("Sair")) {
+			Creditos = false;
+			Nivel = false;
 			Application.Quit ();
 		}
 		
 		GUILayout.EndVertical ();
 		GUILayout.EndArea ();    
 		
-		if (showOptions) {
-			showOptions = true;
-			
-			GUILayout.BeginArea (new Rect (210, 0, 200, 300));
+		if (Nivel) {
+			Nivel = true;
+			GUILayout.BeginArea (new Rect (410, 400, 200, 400));
 			GUILayout.BeginHorizontal ();
 			//text column
-			GUILayout.Label ("Quality settings", GUILayout.Width (100));
+			GUILayout.Label ("Escolher Nivel", GUILayout.Width (100));
 			GUILayout.EndHorizontal ();
 			//settings column
 			GUILayout.BeginHorizontal ();
-			GUILayout.Button ("Fastest");
-			GUILayout.Button ("Fast");
-			GUILayout.Button ("Simple");
-			GUILayout.Button ("Good");
-			GUILayout.Button ("Beautiful");
-			GUILayout.Button ("Fantastic");
+			if(GUILayout.Button ("Nivel 1")){
+				//Application.LoadLevel ("nome sena nivel 1");
+				//descomente a linha acima e apague a linha abaixo
+				print("nivel 1");
+			}
+
+			if (GUILayout.Button ("Nivel 2")){
+				//Application.LoadLevel ("nome sena nivel 2");
+				//descomente a linha acima e apague a linha abaixo
+				print("nivel 2");
+			}
 			GUILayout.EndHorizontal ();
 			GUILayout.EndArea ();
-		} else {
-			showOptions = false;
-		}
-		if (showCredits) {
-			showCredits = true;
-			GUILayout.BeginArea (new Rect (210, 0, 200, 300));
+		} 
+		if (Creditos) {
+			Creditos = true;
+			GUILayout.BeginArea (new Rect (410, 400, 200, 400));
 			GUILayout.BeginHorizontal ();
-			GUILayout.Button ("You did it");
+			GUILayout.Label ("Joguinho feito por Odailton gordo,thyago laskadu e Bruno Invisible");
 			GUILayout.EndHorizontal ();
 			GUILayout.EndArea ();
-		} else {
-			showCredits = false;
 		}
 	}
-
-
-
 }
+
+
