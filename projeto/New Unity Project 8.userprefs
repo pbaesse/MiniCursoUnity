@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\GUI scripts\GUI.cs">
+    <Files>
+      <File FileName="Assets\scripts\Jogador.cs" Line="35" Column="1" />
+      <File FileName="Assets\scripts\GUI scripts\fimdelevel.cs" Line="14" Column="33" />
+      <File FileName="Assets\scripts\Contador.cs" Line="9" Column="42" />
+      <File FileName="Assets\scripts\encontra.cs" Line="26" Column="3" />
+      <File FileName="Assets\scripts\RotaçãoMoeda.cs" Line="37" Column="3" />
+      <File FileName="Assets\scripts\GUI scripts\gameover.cs" Line="18" Column="5" />
+      <File FileName="Assets\scripts\controlador_de_level.cs" Line="18" Column="42" />
+      <File FileName="Assets\scripts\GUI scripts\GUI.cs" Line="69" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
